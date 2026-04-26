@@ -31,8 +31,12 @@ export default function LandingPage() {
           <a href="#features" className="hover:text-white transition-colors">Platform</a>
           <a href="#impact" className="hover:text-white transition-colors">Impact</a>
           <a href="#network" className="hover:text-white transition-colors">Network</a>
+          <Link href="/donate" className="hover:text-emerald-400 transition-colors flex items-center gap-1">💝 Donate</Link>
         </div>
         <div className="flex items-center gap-4">
+          <Link href="/donate" className="text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5 border border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10 px-4 py-2 rounded-xl">
+            💝 Donate
+          </Link>
           <Link href="/login" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">
             Sign In
           </Link>
@@ -69,6 +73,9 @@ export default function LandingPage() {
               </Link>
               <Link href="/map" className="btn-secondary text-base px-8 py-4 flex items-center gap-2">
                 Explore The Map <span className="text-xl leading-none">🗺️</span>
+              </Link>
+              <Link href="/donate" className="btn-secondary text-base px-8 py-4 flex items-center gap-2 text-emerald-300 border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10 hover:border-emerald-500/40">
+                Support a Cause <span className="text-xl leading-none">💝</span>
               </Link>
             </div>
 
@@ -131,9 +138,14 @@ export default function LandingPage() {
             <p className="mx-auto mb-10 max-w-xl text-slate-400 text-lg">
               Start reducing waste and meeting your ESG goals today. Setup takes less than 5 minutes.
             </p>
-            <Link href="/register" className="btn-primary inline-flex px-10 py-5 text-lg shadow-[0_0_30px_rgba(59,130,246,0.3)]">
-              Create Free Account
-            </Link>
+            <div className="flex flex-wrap justify-center gap-5">
+              <Link href="/register" className="btn-primary inline-flex px-10 py-5 text-lg shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                Create Free Account
+              </Link>
+              <Link href="/donate" className="btn-secondary inline-flex px-10 py-5 text-lg text-emerald-300 border-emerald-500/20 bg-emerald-500/5 hover:bg-emerald-500/10 hover:border-emerald-500/40 shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+                💝 Make a Donation
+              </Link>
+            </div>
           </div>
         </div>
       </section>
