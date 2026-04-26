@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0a0f1c;
+    --foreground: #f8fafc;
+  }
+  body {
+    @apply bg-[#0a0f1c] text-white antialiased selection:bg-blue-500/30;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[#131b2f]/80 backdrop-blur-xl border border-white/10 rounded-3xl;
+  }
+  .input-premium {
+    @apply w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500/50 focus:bg-black/60 focus:ring-2 focus:ring-blue-500/20 transition-all;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-bold rounded-xl shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:-translate-y-0.5 active:scale-95 transition-all disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply font-bold rounded-xl border transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none flex items-center justify-center;
+  }
+  .bg-glow-blue {
+    @apply absolute w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none;
+  }
+  .bg-glow-purple {
+    @apply absolute w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-[100px] pointer-events-none;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
